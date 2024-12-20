@@ -1,10 +1,11 @@
 package net.enjoy.springboot.premierleague.controller;
 
-import net.enjoy.springboot.premierleague.dto.UserDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import net.enjoy.springboot.premierleague.dto.UserDto;
 
 @Controller
 public class ViewController {
@@ -39,5 +40,15 @@ public class ViewController {
         }
         model.addAttribute("email", email);
         return "reset-password";
+    }
+
+    @GetMapping("/inventory")
+    public String showInventory() {
+        return "inventory";  // Returns inventory.html
+    }
+
+    @GetMapping("/orders")
+    public String showOrders() {
+        return "orders";  // Returns orders.html
     }
 }

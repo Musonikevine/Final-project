@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
-public class PremierLeagueApplication {
+public class pharmacy {
 
     public static void main(String[] args) {
-        SpringApplication.run(PremierLeagueApplication.class, args);
+        SpringApplication.run(pharmacy.class, args);
     }
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHARMACY MANAGEMENT SYSTEM</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHARMACY MANAGEMENT SYSTEM</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
@@ -32,7 +32,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8)), url('/path/to/your/pharmacy-background.jpg') center/cover;
+            background: linear-gradient(rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8)), url('./assets/pharmacy-background.jpg') center/cover;
         }
 
         /* Navigation Styling */
@@ -135,8 +135,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" th:href="@{/}">
-            <img src="https://pbs.twimg.com/profile_images/1788231088302653440/5xKfAdI8_200x200.jpg" width="50" height="50" alt="Pharmacy Logo"/>
+        <a class="navbar-brand" href="./">
             Pharmacy Management System
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -145,20 +144,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/register}" th:text="#{register}">Register</a>
+                    <a class="nav-link" href="./register.html">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/login}" th:text="#{login}">Login</a>
+                    <a class="nav-link" href="./login.html">Login</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" data-bs-toggle="dropdown">
                         <i class="fas fa-globe me-1"></i>
-                        <span th:text="${#locale.language == 'en' ? 'English' : #locale.language == 'rw' ? 'Kinyarwanda' : 'Français'}">Language</span>
+                        Language
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" th:href="@{''(lang=en)}">English</a></li>
-                        <li><a class="dropdown-item" th:href="@{''(lang=rw)}">Kinyarwanda</a></li>
-                        <li><a class="dropdown-item" th:href="@{''(lang=fr)}">Français</a></li>
+                        <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                        <li><a class="dropdown-item" href="?lang=rw">Kinyarwanda</a></li>
+                        <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
                     </ul>
                 </li>
             </ul>
@@ -170,16 +169,16 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 hero-content">
-                <h1 class="mb-4" th:text="#{welcome_pharmacy}">Welcome to Pharmacy Management System</h1>
-                <p class="lead" th:text="#{experience_pharmacy}">Experience seamless management of pharmacy operations, track inventory, and manage prescriptions with ease.</p>
+                <h1 class="mb-4">Welcome to Pharmacy Management System</h1>
+                <p class="lead">Experience seamless management of pharmacy operations, track inventory, and manage prescriptions with ease.</p>
                 <div class="mt-5 d-flex gap-3 justify-content-center">
-                    <a th:href="@{/register}" class="btn btn-primary">
+                    <a href="./register.html" class="btn btn-primary">
                         <i class="fas fa-user-plus me-2"></i>
-                        <span th:text="#{register}">Register</span>
+                        Register
                     </a>
-                    <a th:href="@{/login}" class="btn btn-secondary">
+                    <a href="./login.html" class="btn btn-secondary">
                         <i class="fas fa-sign-in-alt me-2"></i>
-                        <span th:text="#{login}">Login</span>
+                        Login
                     </a>
                 </div>
             </div>
@@ -189,7 +188,7 @@
 
 <footer>
     <div class="container text-center">
-        <p class="m-0">© 2024 Pharmacy Management System. <span th:text="#{all_rights_reserved}">All Rights Reserved</span>.</p>
+        <p class="m-0">© 2024 Pharmacy Management System. All Rights Reserved.</p>
     </div>
 </footer>
 

@@ -43,7 +43,7 @@ public class EmailService {
             MimeMessage mimeMessage = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "UTF-8");
 
-            helper.setFrom("Rwanda Premier League <" + fromAddress + ">");
+            helper.setFrom("pharmacy <" + fromAddress + ">");
             helper.setSubject(subject);
             helper.setTo(to);
 

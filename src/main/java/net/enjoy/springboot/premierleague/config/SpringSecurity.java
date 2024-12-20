@@ -31,10 +31,12 @@ public class SpringSecurity {
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**").permitAll()
                                 .requestMatchers("/").permitAll()
+                                .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                                 .requestMatchers("/index").permitAll()
                                 .requestMatchers("/forgot-password").permitAll()
                                 .requestMatchers("/reset-password").permitAll()
                                 .requestMatchers("/api/v2.0/**","/download-profile").permitAll()
+                                .requestMatchers("/inventory", "/orders").hasRole("ADMIN")
                                 .requestMatchers("/users").hasRole("ADMIN")
                                 .requestMatchers("/users/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()

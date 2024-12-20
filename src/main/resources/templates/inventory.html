@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - Pharmacy Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/inventory" class="active">Inventory</a></li>
+                <li><a href="/orders">Orders</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Inventory</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Row -->
+                    <tr>
+                        <td>Paracetamol</td>
+                        <td>Pain reliever</td>
+                        <td>$5.00</td>
+                        <td>150</td>
+                        <td><button class="btn-view">View</button> <button class="btn-edit">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Aspirin</td>
+                        <td>Anti-inflammatory</td>
+                        <td>$4.50</td>
+                        <td>120</td>
+                        <td><button class="btn-view">View</button> <button class="btn-edit">Edit</button></td>
+                    </tr>
+                    <!-- More rows can be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pharmacy Management System</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Pharmacy Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/inventory">Inventory</a></li>
+                <li><a href="/orders" class="active">Orders</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Orders</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Status</th>
+                        <th>Order Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Row -->
+                    <tr>
+                        <td>#12345</td>
+                        <td>John Doe</td>
+                        <td>Processing</td>
+                        <td>2024-12-19</td>
+                        <td><button class="btn-view">View</button> <button class="btn-ship">Ship</button></td>
+                    </tr>
+                    <tr>
+                        <td>#12346</td>
+                        <td>Jane Smith</td>
+                        <td>Shipped</td>
+                        <td>2024-12-18</td>
+                        <td><button class="btn-view">View</button> <button class="btn-complete">Complete</button></td>
+                    </tr>
+                    <!-- More rows can be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pharmacy Management System</p>
+    </footer>
+</body>
+</html>
